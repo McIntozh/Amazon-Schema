@@ -1,0 +1,18 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.0">
+  
+    
+  <bindings schemaLocation="xsd/Computers.xsd">
+
+    <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+        <typesafeEnumClass name="Parentage" />
+      </bindings>
+    </bindings>
+      
+  </bindings>
+
+</bindings>

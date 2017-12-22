@@ -1,0 +1,16 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.0">
+  
+  <bindings schemaLocation="xsd/GiftCards.xsd">
+    <bindings node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='GiftCard']/xsd:complexType">
+      <class name="GiftCardSub"/>
+    </bindings>
+    <bindings node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='ElectronicGiftCard']">
+      <class name="ElectronicGiftCard"/>
+    </bindings>
+  </bindings>
+
+</bindings>

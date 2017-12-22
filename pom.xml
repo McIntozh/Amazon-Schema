@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>de.schwarzdennis</groupId>
+  <artifactId>schema</artifactId>
+  <version>1.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>amazon_schema</name>
+
+  <properties>
+    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jaxb.forceRegenerate>true</jaxb.forceRegenerate>
+  </properties>
+    
+  <dependencies>
+  </dependencies>
+
+  <build>
+    <finalName>amazon_schema</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.jvnet.jaxb2.maven2</groupId>
+        <artifactId>maven-jaxb2-plugin</artifactId>
+        <version>0.13.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <schemaIncludes>
+                <include>xsd/amzn-envelope.xsd</include>
+              </schemaIncludes>
+              <catalogResolver>org.jvnet.jaxb2.maven2.resolver.tools.ClasspathCatalogResolver</catalogResolver>
+              <generatePackage>com.amazon</generatePackage>
+              <generateDirectory>${project.build.directory}/generated-sources/xjc</generateDirectory>
+              <strict>true</strict>
+              <verbose>false</verbose>
+              <removeOldOutput>true</removeOldOutput>
+              <clearOutputDir>true</clearOutputDir>
+              <forceRegenerate>${jaxb.forceRegenerate}</forceRegenerate>
+            </configuration>
+            <id>jaxb-generate-amazon</id>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
+

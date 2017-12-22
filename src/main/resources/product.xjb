@@ -1,0 +1,34 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.1"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/jaxb/bindingschema_2_0.xsd">
+
+  <globalBindings
+    typesafeEnumMaxMembers="9000"
+    typesafeEnumMemberName="generateName"
+    underscoreBinding="asCharInWord">
+  </globalBindings>
+  
+  
+  <bindings schemaLocation="xsd/FoodServiceAndJanSan.xsd" node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='FoodServiceAndJanSan']/xsd:complexType">
+    <class name="FoodServiceAndJanSanSub"/>
+  </bindings>
+  <bindings schemaLocation="xsd/MechanicalFasteners.xsd" node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='MechanicalFasteners']/xsd:complexType">
+    <class name="MechanicalFastenersSub"/>
+  </bindings>
+  <bindings schemaLocation="xsd/ProfessionalHealthCare.xsd" node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='ProfessionalHealthCare']">
+    <class name="ProfessionalHealthCareSub"/>
+  </bindings>
+  <bindings schemaLocation="xsd/WineAndAlcohol.xsd">
+    <bindings node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='Spirits']">
+      <class name="Spirits"/>
+    </bindings>
+    <bindings node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='Beer']">
+      <class name="Beer"/>
+    </bindings>
+  </bindings>
+  
+  
+</bindings>

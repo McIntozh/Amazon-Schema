@@ -1,0 +1,37 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.0"
+>
+    
+    
+  <bindings schemaLocation="xsd/ProductClothing.xsd">
+    <bindings node="//xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+        <typesafeEnumClass name="Parentage" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+        <typesafeEnumClass name="VariationTheme" />
+      </bindings>
+    </bindings>
+    <bindings node="//xsd:element[@name='ClassificationData']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='ClothingType']/xsd:simpleType">
+        <typesafeEnumClass name="ClothingType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='PerformanceRating']/xsd:simpleType">
+        <typesafeEnumClass name="PerformanceRating" />
+      </bindings>
+      <bindings node="./xsd:element[@name='CupSize']/xsd:simpleType">
+        <typesafeEnumClass name="CupSize" />
+      </bindings>
+      <bindings node="./xsd:element[@name='TargetGender']/xsd:simpleType">
+        <typesafeEnumClass name="TargetGender" />
+      </bindings>
+      <bindings node="./xsd:element[@name='WaterResistanceLevel']/xsd:simpleType">
+        <typesafeEnumClass name="WaterResistanceLevel" />
+      </bindings>
+    </bindings>
+  </bindings>
+    
+</bindings>

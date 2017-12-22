@@ -1,0 +1,80 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.0"
+>
+  
+    
+  <!-- Binding Enums to simpleType enumerations that cannot be generated automatically -->  
+  <bindings schemaLocation="xsd/CE.xsd">
+    <bindings node="//xsd:element[@name='ConsumerElectronics']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+          <typesafeEnumClass name="Parentage" />
+        </bindings>
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='DigitalMediaFormat']/xsd:simpleType">
+        <typesafeEnumClass name="DigitalMediaFormat" />
+      </bindings>
+    </bindings>
+    <bindings node="//xsd:element[@name='KindleAccessories']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+          <typesafeEnumClass name="Parentage" />
+        </bindings>
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      <bindings node="./xsd:element[@name='DigitalMediaFormat']/xsd:simpleType">
+        <typesafeEnumClass name="DigitalMediaFormat" />
+      </bindings>
+    </bindings>
+    <bindings node="//xsd:element[@name='KindleEReaderAccessories']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+          <typesafeEnumClass name="Parentage" />
+        </bindings>
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      <bindings node="./xsd:element[@name='DigitalMediaFormat']/xsd:simpleType">
+        <typesafeEnumClass name="DigitalMediaFormat" />
+      </bindings>
+    </bindings>
+    <bindings node="//xsd:element[@name='KindleFireAccessories']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+          <typesafeEnumClass name="Parentage" />
+        </bindings>
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      <bindings node="./xsd:element[@name='DigitalMediaFormat']/xsd:simpleType">
+        <typesafeEnumClass name="DigitalMediaFormat" />
+      </bindings>
+    </bindings>
+    <bindings node="//xsd:element[@name='ProductSubtype']/xsd:simpleType">
+      <typesafeEnumClass name="ProductSubtype" />
+    </bindings>
+    <bindings node="//xsd:element[@name='FloppyDiskDrive']/xsd:simpleType">
+      <typesafeEnumClass name="FloppyDiskDrive" />
+    </bindings>
+    <bindings node="//xsd:element[@name='LithiumBatteryPackaging']/xsd:simpleType">
+      <typesafeEnumClass name="LithiumBatteryPackaging" />
+    </bindings>
+    <bindings node="//xsd:element[@name='EuEnergyLabelEfficiencyClass']/xsd:simpleType">
+      <typesafeEnumClass name="EuEnergyLabelEfficiencyClass" />
+    </bindings>
+  </bindings>
+    
+</bindings>

@@ -1,0 +1,46 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.0">
+  
+    
+  <bindings schemaLocation="xsd/Health.xsd">
+    <bindings node="//xsd:element[@name='Health']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='LithiumBatteryPackaging']/xsd:simpleType">
+        <typesafeEnumClass name="LithiumBatteryPackaging" />
+      </bindings>
+    </bindings>
+    <bindings node="//xsd:element[@name='HealthMisc']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+          <typesafeEnumClass name="Parentage" />
+        </bindings>
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='TargetGender']/xsd:simpleType">
+        <typesafeEnumClass name="TargetGender" />
+      </bindings>
+    </bindings>
+    <bindings node="//xsd:element[@name='PersonalCareAppliances']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+          <typesafeEnumClass name="Parentage" />
+        </bindings>
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      <bindings node="./xsd:element[@name='TargetGender']/xsd:simpleType">
+        <typesafeEnumClass name="TargetGender" />
+      </bindings>
+    </bindings>
+  </bindings>
+
+</bindings>

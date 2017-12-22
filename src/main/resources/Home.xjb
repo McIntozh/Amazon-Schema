@@ -1,0 +1,127 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.0">
+  
+    
+  <bindings schemaLocation="xsd/Home.xsd">
+    
+    <bindings node="//xsd:element[@name='ProductType']/xsd:complexType/xsd:choice/xsd:element[@name='Home']/xsd:complexType">
+      <class name="HomeSub"/>
+    </bindings>
+    
+    <bindings node="(//xsd:element[@name='Home']/xsd:complexType/xsd:sequence)[1]">
+      
+      <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+        <typesafeEnumClass name="Parentage" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='Parentage']/xsd:simpleType">
+          <typesafeEnumClass name="Parentage" />
+        </bindings>
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='LithiumBatteryPackaging']/xsd:simpleType">
+        <typesafeEnumClass name="LithiumBatteryPackaging" />
+      </bindings>
+      <bindings node="./xsd:element[@name='SunlightExposure']/xsd:simpleType">
+        <typesafeEnumClass name="SunlightExposure" />
+      </bindings>
+      <bindings node="./xsd:element[@name='MoistureNeeds']/xsd:simpleType">
+        <typesafeEnumClass name="MoistureNeeds" />
+      </bindings>
+    </bindings>
+
+        
+    <bindings node="//xsd:element[@name='BedAndBath']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      <bindings node="./xsd:element[@name='LithiumBatteryPackaging']/xsd:simpleType">
+        <typesafeEnumClass name="LithiumBatteryPackaging" />
+      </bindings>
+    </bindings>
+    
+    
+    <bindings node="//xsd:element[@name='FurnitureAndDecor']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+      <bindings node="./xsd:element[@name='LithiumBatteryPackaging']/xsd:simpleType">
+        <typesafeEnumClass name="LithiumBatteryPackaging" />
+      </bindings>
+    </bindings>
+    
+    
+    <bindings node="//xsd:element[@name='Kitchen']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+    </bindings>
+    
+    
+    <bindings node="//xsd:element[@name='OutdoorLiving']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+    </bindings>
+    
+    
+    <bindings node="//xsd:element[@name='SeedsAndPlants']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='MoistureNeeds']/xsd:simpleType">
+        <typesafeEnumClass name="MoistureNeeds" />
+      </bindings>
+      <bindings node="./xsd:element[@name='SunlightExposure']/xsd:simpleType">
+        <typesafeEnumClass name="SunlightExposure" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+    </bindings>
+    
+    
+    <bindings node="//xsd:element[@name='Art']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='IdentityPackageType']/xsd:simpleType">
+        <typesafeEnumClass name="IdentityPackageType" />
+      </bindings>
+      <bindings node="./xsd:element[@name='VariationData']/xsd:complexType/xsd:sequence">
+        <bindings node="./xsd:element[@name='VariationTheme']/xsd:simpleType">
+          <typesafeEnumClass name="VariationTheme" />
+        </bindings>
+      </bindings>
+    </bindings>
+  </bindings>
+
+</bindings>

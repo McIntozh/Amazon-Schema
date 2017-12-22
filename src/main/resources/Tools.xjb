@@ -1,0 +1,19 @@
+<bindings
+  xmlns="http://java.sun.com/xml/ns/jaxb" 
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="2.0">
+  
+    
+  <bindings schemaLocation="xsd/Tools.xsd">
+    <bindings node="//xsd:element[@name='Tools']/xsd:complexType/xsd:sequence">
+      <bindings node="./xsd:element[@name='PowerSource']/xsd:simpleType">
+        <typesafeEnumClass name="PowerSource" />
+      </bindings>
+      <bindings node="./xsd:element[@name='LithiumBatteryPackaging']/xsd:simpleType">
+        <typesafeEnumClass name="LithiumBatteryPackaging" />
+      </bindings>
+    </bindings>
+  </bindings>
+
+</bindings>
